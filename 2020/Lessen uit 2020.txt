@@ -1,0 +1,5 @@
+Bestand openen: lst1 = open('input.txt', 'r').read().splitlines()
+of lst = open('input.txt', 'r').read().split('\n')
+Convert each el to int: lst = list(map(int,lst1))
+Wat was een Iterator ook alweer?
+Sets: set = set() set = set.union(p)

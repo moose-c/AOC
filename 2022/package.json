@@ -1,0 +1,15 @@
+{
+  "name": "2022",
+  "version": "1.0.0",
+  "main": "3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  }
+}

@@ -1,0 +1,71 @@
+concurrent list operation vindt hij niet leuk, oppassen
+nieuwe string concat: a = 'hallo' + naam + ', goeie morgen' => a = f'hallo {naam}, goeie morgen'
+Comprehensions: dict = {i: i*i for i in range(10)}, set = {i%3 for i in range(10)} generato = (2*x + 5 for x in range(10))
+type(p) == tuple => isinstance(p, tuple)
+Numpy for array operations
+
+--- Full University Python Course --
+-- 1 Intro
+cmd -> 'python' opens python here, quit with 'cntl z' or 'quit' 
+Named after monthy python Flying Circus; funn & approachable
+Sequential, Repeated or Conditional
+
+-- 2 Variables, Expressions and Statements
+Variable = constant
+float + integer = float 
+Ask input: nam = input('wie ben jij') resultaat is altijd string!
+
+-- 3 Conditional execution
+print('naam', -3) werkt gewoon! 
+try except, of try, als mislukt dan except, anders niet. zet alleen dingen die gevaarlijk zijn.
+dit combineren met input, als user geen integer input except om te vangen
+
+-- 4 Functions
+def function(parameters)
+'Fruitfull' functions return something, void functions are not 'Fruitfull' 
+if input is a list editing this list in the function edits the original list.
+
+-- 5 Loops and Iterations
+break exits the inner most loop!, continue jumps to next iteration
+while: Called "indefinite loop", for: called "definite loop"
+None means empty, a = None, not yet a value
+0 == 0.0 is True, 0 is 0.0 is False. type and value!
+
+-- 6 Strings
+string = 'abcdefghij' not mutable! string[1] = 'a' not possible
+string[0] == 'a' string[0:4] = 'abcd', string[6:7] = 'g', string[8:100] = 'ij'
+string is an instance of str object, these have methods: 
+string.lower(), 
+
+-- 7 Reading Files
+'r' read file, 'w' write in file, without specifying means 'r', \n is a single character.
+everyline is ended by single \n character. xfile = open(), for line in xfile: print(line)
+.read() gives a single string including \n characters.
+
+-- 8 Lists:
+range(3) == [0, 1, 2], in range(3),
+Concatenate: c = a + b, slicing as above, dir(a), a.sort() (Fruitless)
+.split() splits at spaces (lot of spaces or \n)
+
+-- Dict:
+x  = count.get(key, value in case key is not in dict)
+
+
+Day9:
+data = input betekend dat data en input naar hetzelfde gaan wijzen, een verandering van data of input verandert beide. 
+data = input.copy()  maakt iets nieuws van data.
+input[0].replace('()', '') werkt niet ('Fruitfull'), input = input[0].replace('()', '')
+
+Numpy Video:
+Multidimensional arrays, 1D, 2D, 3D etc.
+lists are slow, arrays are fast, less to read and no type checking, contiguous memory: 
+5 = 00000101 (one byte) -numpy> int 32 bit (4 bytes) (can specify int16, int8), contiguous memory
+                        -lists> object value (int64), object type, reference count, size A lot! Pointer structure
+Contiguous memory -> SIMD vector processing (SingleInstructureMultipleData), +1 on all values, more effective Cache utilization
+
+Numpy does the same as lists, but way more! ex: a*b is itemwize multiplication
+Uses; Mathematics, replaces almost all MATLAB functions, Plotting, Backend, machine learling
+
+Day11:
+a = (0,1)
+lst[a] row 0, col 1
