@@ -12,16 +12,18 @@ def performRule(rule, pairs):
     newPairs = pairs[:]
     for pair in pairs:
         if pair[2]:
+            # If a pair is changed, we want to remove the original
             somethingHappened = False
             if pair[0] < start:
                 if pair[1] >= start:
+                    # If you're here, you know that the tuple contains different values
                     somethingHappened = True
-                    newPairs.append([pair[0], start - 1, False])
+                    newPairs.append([pair[0], start - 1, True])
                     if pair[1] < start + offset:
                         newPairs.append([dest, pair[1] - start + dest, False])
                     else:
                         newPairs.append([dest, dest + offset - 1, False])
-                        newPairs.append([start + offset, pair[1], False])
+                        newPairs.append([start + offset, pair[1], True])
             elif pair[0] < start + offset:
                 somethingHappened = True
                 if pair[1] < start + offset:
@@ -30,8 +32,9 @@ def performRule(rule, pairs):
                     )
                 else:
                     newPairs.append([pair[0] - start + dest, dest + offset - 1, False])
-                    newPairs.append([start + offset, pair[1], False])
+                    newPairs.append([start + offset, pair[1], True])
             if somethingHappened:
+                # only remove the first occurance
                 newPairs.remove(pair)
     return newPairs
 
@@ -61,7 +64,6 @@ def part2(seeds):
         [seeds[2 * i], seeds[2 * i] + seeds[2 * i + 1] - 1]
         for i in range(int(len(seeds) / 2))
     ]
-    print(seedPairs)
     for key in infDict.keys():
         seedPairs = [[pair[0], pair[1], True] for pair in seedPairs]
         for rule in infDict[key]:
@@ -72,5 +74,5 @@ def part2(seeds):
 
 
 part2(seeds)
-
+# part 1 answer (upper bound) 403695602
 # 96143715 too low
