@@ -1,1 +1,21 @@
-Running typescript:
+Java dingen:
+public class notes {
+    public static void main(String[] args){
+        int x=1, y=2, z=3;
+        double a = 12.33d; (prefered);
+        System.out.println("Hello World");
+        char c = 45; (using ASCII)
+        String str = "hallo wereld, \'mooie wereld\'";
+        str.length();
+        str.toUpperCase();
+        str.indexOf('a');
+        long_str= str1 + str2; (same: str1.concat(str2))
+
+    }
+}
+
+print("Hello World!")
+
+Primitive (defined by java): type and size determined, no additional methods. (8: byte, short, int, long, float, double, boolean, char)
+Non-Primitive (reference types; refer to objects): String (only non def by java), Arrays, Classes
+Autocast to larger type, manually cast to smaller type
